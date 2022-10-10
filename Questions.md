@@ -16,7 +16,7 @@ class A
     }
 }
 ```
-A sealed class is a class with the *sealed* keyword used to restrict a class from being inherited from.
+A sealed class is a class with the *sealed* keyword used to restrict a class from being inherited from. __`Recommend to use if classes are not to have subtypes.`__
 A partial class is a class with the *partial* keyword used to split a class into multiple files. At runtime the files are organised as one file so method and variable names must be unique across the partial class files.
 
 2. List and briefly explain the main principles of object-oriented programming?
@@ -47,11 +47,62 @@ A partial class is a class with the *partial* keyword used to split a class into
 
 7. What is boxing and unboxing? The conversion of a type from value to reference is called boxing. The conversion of a type from reference to value is called unboxing. 
 
+
+9. Describe the access modifiers in CSharp.
+C# has four main access modifiers: public, private, protected and internal. These four can be used in combination to construct 6 access modifier parameters:
+- public: access is not restricted
+- protected: access is restricted within the containing type or its subtypes 
+- internal: access is restricted within the current assembly
+- protected internal: access is restricted within the current assembly or subtypes of the containing type
+- private: access is limited within the containing member.
+- private protected: access is limited to the current type of subtypes within the same assembly
+
 8. What is a delegate?
-9. Describe Dependency Injection.
-10. Describe the access modifiers in CSharp.
-11. What is an array?
-12. What is Linq?
-13. What is Reflection?
-14. Explain code compilation in CSharp.
-15. Describe the CLR and .NET architecture.
+9. Explain code compilation in CSharp.
+10. What is an array?
+An array is a variable to store multiple elements under the same identifier. Arrays can be single, multi-dimensional or jagged. The default value for nueric types is zero and for reference types is null. Array types are reference types derived from the `Array` base type which in turn implements the `IEnumerable` and `IEnumerable<T>` allows for foreach iteration. The length and dimensions of an array are established when the array is created and cannot be changed in te lifetimeof that array. Basic usage of array below where T is the type of  elements to store in the array:
+```
+// Declare with element count
+T[] identifier = new T[5];
+
+// Declare with initial elements
+T[] identifier = new T[] { item1, item2, ..., itemN};
+
+// Shorthand syntax
+T[] identifier = { item1, item2, ..., itemN};
+
+// Implicit typed array with new operator
+var identifier = new[] { item1, item2, ..., itemN};
+
+// Multi-dimensional array: x and y are dimensions for the array
+T[,] identifier = new T[x,y];
+
+// Jaggered array
+T[][] identifier = new T[x][y];
+
+
+```
+11. What is Linq?
+LINQ (Language INtegrated Query) is the name for query technologies intergrated into the C# language. Use a query expression (a query expressed in query syntax) written either in a) query syntax or b) method syntax. A basic example of LINQ is shown below:
+```
+int[] numbers = { 1, 3, 45, 30, 890 };
+
+// LINQ expression: number is the range variable
+IEnumerable aboveFifty = from number in numbers
+                        where number > 50
+                        select number;
+
+// Iterate through the query variable
+foreach (var num in aboveFifty)
+{
+    Console.WriteLine(num);
+}
+```
+Query expressions can be used to query and transform data from any LINQ-enabled data source. A query is not evaluated until you iterate over the query variable (stores the query instead of the results of the query as an enumerable). A query expression must begin with the `from` clause (introduces the data source) and ends with either `select` or `group` clause. In between it can contain multiple optional clauses such as `where`, `orderby`, `join`, `let` or other `from` clauses.  
+__`Recommend to use query syntax to method syntax unless necessary.`__
+
+12. What is Reflection?
+13. Describe the CLR and .NET architecture.
+14. Describe Dependency Injection.
+15. What are expression trees?
+16. Demonstrate your understanding of Regex in C#.

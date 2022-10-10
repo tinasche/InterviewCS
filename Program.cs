@@ -1,5 +1,4 @@
-﻿using InterviewCS.Classes;
+﻿var nameMaker = new[] {'t','i','n','a','s','h','e'};
 
-Alien vilgax = new Alien("Vulgan", "Vulgan Supreme 1", "steal the omnitrix from Ben Tennyson");
-Console.Write(vilgax.ToString());
-Console.Write(Alien.GetAlienCount() + " aliens on planet so far");
+string fullname = new string(nameMaker);
+Console.Write(fullname.GetType().GetType());
