@@ -58,6 +58,7 @@ C# has four main access modifiers: public, private, protected and internal. Thes
 - private protected: access is limited to the current type of subtypes within the same assembly
 
 8. What is a delegate?
+
 9. Explain code compilation in CSharp.
 10. What is an array?
 An array is a variable to store multiple elements under the same identifier. Arrays can be single, multi-dimensional or jagged. The default value for nueric types is zero and for reference types is null. Array types are reference types derived from the `Array` base type which in turn implements the `IEnumerable` and `IEnumerable<T>` allows for foreach iteration. The length and dimensions of an array are established when the array is created and cannot be changed in te lifetimeof that array. Basic usage of array below where T is the type of  elements to store in the array:
