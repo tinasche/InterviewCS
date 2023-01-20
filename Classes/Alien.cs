@@ -1,5 +1,6 @@
 namespace InterviewCS.Classes
 {
+    [Author("Tinashe Chitakunye", "testing partial class theory")]
     partial class Alien
     {
         public int Id { get; set; }

@@ -1,26 +1,9 @@
-﻿using System.Runtime.InteropServices;
+﻿var someString = "this is a simple string to test with!";
 
-var myOrders = new Order[]
+Console.WriteLine(someString);
+
+var someInts = Enumerable.Range(1, 10).ToArray<int>();
+for (int i = 0; i < someInts.Length; i++)
 {
-    new Order("sadza and beef stew", 3, 80),
-    new Order("rice and beef stew", 2, 85),
-    new Order("chips and chicken", 1, 43),
-    new Order("rice and truffles", 1, 80),
-    new Order("spaghetti and white sauce", 4, 70),
-    new Order("samp and turkey", 2, 64)
-};
-
-var ordersSpan = CollectionsMarshal.AsSpan<Order>();
-
-var lessThan2Orders = from orderItem in myOrders
-                      where orderItem.quantity >= 2
-                      orderby orderItem.orderName
-                      select orderItem;
-
-foreach (var item in lessThan2Orders)
-{
-    Console.WriteLine(item);
+    Console.WriteLine(someInts[i]);
 }
-
-
-record Order(string orderName, byte quantity, float nutValue);
