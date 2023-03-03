@@ -1,0 +1,34 @@
+[
+    {
+        "make": "toyota",
+        "model": "allion",
+        "colour": "silver",
+        "release_year": 2016,
+        "fuel": "petrol",
+        "transmission": "automatic"
+    },
+    {
+        "make": "honda",
+        "model": "fit",
+        "colour": "grey",
+        "release_year": 2019,
+        "fuel": "petrol",
+        "transmission": "automatic"
+    },
+    {
+        "make": "toyota",
+        "model": "vigo hilux",
+        "colour": "beige",
+        "release_year": 2009,
+        "fuel": "diesel",
+        "transmission": "manual"
+    },
+    {
+        "make": "nissan",
+        "model": "hardbody",
+        "colour": "black",
+        "release_year": 2008,
+        "fuel": "diesel",
+        "transmission": "manual"
+    }
+]

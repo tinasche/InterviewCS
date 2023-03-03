@@ -1,7 +1,7 @@
 namespace InterviewCS.Classes
 {
     [Author("Tinashe Chitakunye", "testing partial class theory")]
-    partial class Alien
+    partial class Alien : Being
     {
         public int Id { get; set; }
         public string Species { get; set; } = String.Empty;

@@ -1,9 +1,6 @@
-﻿var someString = "this is a simple string to test with!";
-
-Console.WriteLine(someString);
-
-var someInts = Enumerable.Range(1, 10).ToArray<int>();
-for (int i = 0; i < someInts.Length; i++)
+﻿PrintDelegate Print = (string text) =>
 {
-    Console.WriteLine(someInts[i]);
-}
+    Console.W
+};
+
+delegate void PrintDelegate(string text);

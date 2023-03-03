@@ -15,6 +15,14 @@ partial class Alien : IEquatable<Alien>
 
     public static int GetAlienCount() => alienCount;
 
+    public override void ShowInfo()
+    {
+        throw new NotImplementedException();
+    }
+
+    
+
+    // Implements IEquatable to reproduce an overload for Equal() method. Simplest form shown below.
     public bool Equals(Alien? other)
     {
         if (other is Alien)
