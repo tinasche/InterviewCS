@@ -131,12 +131,13 @@ Console.WriteLine($"My age is {spec1.Item1}, height: {spec1.Item2}");
 var spe2 = (Age: 31, Height: 1.76);
 Console.WriteLine($"My age is {spec2.Age}, height: {spec2.Height}");
 
-// Desconstructing syntax; where T represents some type.
+// Deconstructing syntax; where T represents some type.
 (type T1, type T2) = TVar;
 
 // Alternative syntax for the above.
 var (T1, T2) = TVar;
 ```
+Discards for variables
 
 19. What are extension methods?
 It is a special purpose *static method* that adds functionality to an already existing type without modifying the type you want to add functionality to.
@@ -190,7 +191,7 @@ if (File.Exists(filename))
     Console.Write(myCar);
 }
 ```
-22. Explain Events in C#.
+22. Discuss Events in C#.
 
 23. Explain the concepts of Covariance and Contravariance.
 
@@ -224,4 +225,25 @@ firstIndexer[0] = "tinashe";
 ```
 
 25. Describe briefly how *struct* type works in C#.
-It is a value type which devires from Ssttem.VaueType and is useful for representing values whose memenry requirements are small. all primitives types defive from the struct type.
+It is a value type which devires from System.VaueType and is useful for representing values whose memory requirements are small. All primitive types defive from the struct type.
+
+26. Discuss working with strings in C#.
+27. Discuss Configuration in .NET.
+Use of the IConfiguration type to provide a unified view of configuration data from the multiple providers such as:
+- File (.JSON, .XML, .INI)
+- Environment Variables
+- Key-per-file
+- Command-line 
+- Memory
+- Azure Key Vault
+- Azure App configuration
+
+You can extend reads without the generic host by using implementations of the `Microsoft.Extensions.Configuration` class using the `ConfigurationBuilder` class of the above package namespace.
+Some common interfaces involved are:
+- IConfiguration: represents key/value sets of app config properties  
+- IConfigurationRoot: represents the root of configuration hierarchy
+- IConfigurationSection: represents a section of app config properties
+
+Use the `Options Pattern` using classes to provide strongly-typed access to groups.
+
+28. Discuss Logging in .NET

@@ -40,7 +40,6 @@ namespace InterviewCS.Classes
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.BackgroundColor = ConsoleColor.DarkGreen;
             return $"The {this.Make} {this.Model} released in {this.ReleaseYear.Year} with a colour of {this.Colour}.";
-
         }
     }
 }
